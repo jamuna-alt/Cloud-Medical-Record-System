@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Management</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Doctor Registration</h1>
+
+    <form method="POST" action="/add_doctor">
+
+        <input type="text"
+               name="name"
+               placeholder="Enter Doctor Name"
+               required>
+
+        <input type="text"
+               name="specialization"
+               placeholder="Enter Specialization"
+               required>
+
+        <input type="text"
+               name="phone"
+               placeholder="Enter Contact Number"
+               required>
+
+        <button type="submit">Save Doctor</button>
+
+    </form>
+
+    <a href="/">Back Home</a>
+
+</div>
+
+</body>
+</html>

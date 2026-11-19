@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Patients</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Patient Records</h1>
+
+<form method="GET" action="/view_patients">
+    <input
+        type="text"
+        name="search"
+        placeholder="Search patient by name"
+        value="{{ search }}"
+    >
+
+    <button type="submit">Search</button>
+</form>
+
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Medical Information</th>
+        </tr>
+
+        {% for patient in patients %}
+        <tr>
+            <td>{{ patient[0] }}</td>
+            <td>{{ patient[1] }}</td>
+            <td>{{ patient[2] }}</td>
+            <td>{{ patient[3] }}</td>
+            <td>{{ patient[4] }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br>
+
+    <a href="/add_patient">Add Another Patient</a>
+    <a href="/">Back Home</a>
+
+</div>
+
+</body>
+</html>
